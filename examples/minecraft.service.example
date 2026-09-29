@@ -1,0 +1,15 @@
+[Unit]
+Description=Minecraft Fabric Server
+After=network.target
+
+[Service]
+Type=simple
+User=minecraft
+Group=minecraft
+WorkingDirectory=/srv/minecraft
+ExecStart=/usr/bin/java -Xms2G -Xmx6G -jar fabric-server.jar nogui
+Restart=on-failure
+TimeoutStartSec=600
+
+[Install]
+WantedBy=multi-user.target

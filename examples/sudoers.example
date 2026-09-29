@@ -1,0 +1,7 @@
+# Example only. Review paths on the target host with `command -v`.
+# Install with visudo validation rather than editing /etc/sudoers directly.
+
+# Allow the operations account to call the maintenance script and service manager
+# without giving it unrestricted root access.
+Cmnd_Alias MC_MAINTENANCE = /usr/local/bin/mc_restart.sh, /bin/systemctl start minecraft, /bin/systemctl stop minecraft, /bin/systemctl restart minecraft, /bin/systemctl status minecraft
+minecraft-ops ALL=(root) NOPASSWD: MC_MAINTENANCE

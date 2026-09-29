@@ -1,0 +1,17 @@
+[Unit]
+Description=Minecraft Discord Operations Bot
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=minecraft-ops
+Group=minecraft-ops
+WorkingDirectory=/opt/discord_bot
+EnvironmentFile=/opt/discord_bot/.env
+ExecStart=/usr/bin/node /opt/discord_bot/index.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

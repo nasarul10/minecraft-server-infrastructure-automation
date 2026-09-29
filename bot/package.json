@@ -1,0 +1,13 @@
+{
+  "name": "minecraft-discord-operations-bot",
+  "private": true,
+  "description": "Dependency manifest documenting the stack used by the project Discord operations bot.",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "discord.js": "^14.0.0",
+    "dotenv": "^16.0.0",
+    "rcon-client": "^4.0.0"
+  }
+}
