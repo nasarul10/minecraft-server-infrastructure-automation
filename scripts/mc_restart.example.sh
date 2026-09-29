@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# Sanitized portfolio example based on the maintenance workflow used in the project.
 # Adapt paths, service name, rclone remote, retention policy, and notification method
 # before using this on a real server.
 
